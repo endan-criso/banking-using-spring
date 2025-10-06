@@ -1,0 +1,92 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    font-family: 'Poppins', 'sans-serif';
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(61, 61, 254);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.account-info{
+    width: 1300px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(40px);
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 11px;
+}
+
+.intro{
+    display: flex;
+    gap:20px
+}
+
+.intro p{
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.accNo{
+    font-size: 18px;
+    padding: 2px 0px;
+    cursor: pointer;
+}
+
+.cash{
+    display: flex;
+    flex-direction: row;
+    font-size: 90px;
+    padding-left :5px;
+    padding-top: 20px;
+}
+
+.cash p{
+    margin-top: 50px;
+    padding: 0px 15px;
+}
+
+.other-op{
+    width: 1300px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(40px);
+    color: #fff;
+    padding: 30px 40px;
+    border-radius: 4px;
+}
+
+.merge{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.send span{
+
+    border: 1px solid;
+    padding: 20px 40px;
+    border-radius: 40px;
+    margin: 50px;
+}
+
+.send .link-edit{
+    color: #fff;
+    text-decoration: none;
+}
