@@ -19,7 +19,7 @@ graph TD
     G --> |Response flows back| A
 ```
 
-<h3>⚙️ Core Functionality</h3>
+<h3>Core Functionality</h3>
 
 <ul>
   <li><b>Authentication:</b> Manual verification and session-based login.</li>
