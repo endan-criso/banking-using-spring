@@ -18,6 +18,20 @@ graph TD
     F --> G[(H2 In-Memory Database)]
     G --> |Response flows back| A
 ```
+<hr>
+<h3>Screen Shots: </h3>
+
+<br>
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/1ba144eb-c12a-4494-85be-72b58cd3bfb2" />
+
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/79d57004-5334-4c5b-a514-2d9a3284a549" />
+
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/e0bfe0e6-7218-401a-8128-05ac5888f2a3" />
+<hr>
+
+
 
 <h3>Core Functionality</h3>
 
