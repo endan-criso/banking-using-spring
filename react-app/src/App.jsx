@@ -1,25 +1,71 @@
-import { useState } from 'react'
-import './App.css'
-import Login from './Page/Login'
-import Register from './Page/Register'
-import Dashboard from "./Page/Dashboard";
-import { Router, Route, Routes } from 'react-router-dom'
-import Sender from './Page/Sender';
-import History from './Page/History';
+import { Routes, Route, Navigate } from "react-router-dom";
+import AuthLayout from "./layouts/AuthLayout";
+import AppLayout from "./layouts/AppLayout";
+import ProtectedRoute from "./routes/ProtectedRoute";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
+import Sender from "./pages/Sender";
+import History from "./pages/History";
+import "./styles/global.css";
 
 function App() {
-
   return (
-    <>
-        <Routes>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/dashboard" element={<Dashboard/>}/>
-          <Route path="/send" element={<Sender/>}/>
-          <Route path="/history" element={<History/>}/>
-        </Routes>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Navigate to="/login" />} />
+      
+      <Route 
+        path="/login" 
+        element={
+          <AuthLayout>
+            <Login />
+          </AuthLayout>
+        } 
+      />
+      
+      <Route 
+        path="/register" 
+        element={
+          <AuthLayout>
+            <Register />
+          </AuthLayout>
+        } 
+      />
+      
+      <Route 
+        path="/dashboard" 
+        element={
+          <ProtectedRoute>
+            <AppLayout>
+              <Dashboard />
+            </AppLayout>
+          </ProtectedRoute>
+        } 
+      />
+      
+      <Route 
+        path="/send" 
+        element={
+          <ProtectedRoute>
+            <AppLayout>
+              <Sender />
+            </AppLayout>
+          </ProtectedRoute>
+        } 
+      />
+      
+      <Route 
+        path="/history" 
+        element={
+          <ProtectedRoute>
+            <AppLayout>
+              <History />
+            </AppLayout>
+          </ProtectedRoute>
+        } 
+      />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
